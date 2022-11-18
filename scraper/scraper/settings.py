@@ -1,4 +1,4 @@
-# Scrapy settings for electronica_fair project
+# Scrapy settings for scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'electronica_fair'
+BOT_NAME = 'scraper'
 
-SPIDER_MODULES = ['electronica_fair.spiders']
-NEWSPIDER_MODULE = 'electronica_fair.spiders'
+SPIDER_MODULES = ['scraper.spiders']
+NEWSPIDER_MODULE = 'scraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'electronica_fair (+http://www.yourdomain.com)'
+#USER_AGENT = 'scraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'electronica_fair.middlewares.ElectronicaFairSpiderMiddleware': 543,
+#    'scraper.middlewares.ScraperSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'electronica_fair.middlewares.ElectronicaFairDownloaderMiddleware': 543,
+#    'scraper.middlewares.ScraperDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'electronica_fair.pipelines.ElectronicaFairPipeline': 300,
+#    'scraper.pipelines.ScraperPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

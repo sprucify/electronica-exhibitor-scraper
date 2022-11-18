@@ -4,8 +4,15 @@ from scrapy.linkextractors import LinkExtractor
 
 class ElectronicaSpider(scrapy.Spider):
     name = 'electronica'
-    allowed_domains = ['electronica.de']
-    start_urls = ['https://exhibitors.electronica.de/exhibitor-portal/2022/list-of-exhibitors/']
+
+    def start_requests(self):
+        yield scrapy.Request(
+            url="https://exhibitors.electronica.de/exhibitor-portal/2022/list-of-exhibitors/",
+            meta={
+                "playwright": True,
+                "playwright_include_page": True
+            },
+        )
 
     def parse(self, response):
         all_exhibitors = response.xpath('//*[@id="jl_contentWrapper"]//*[starts-with(@id, "ceId")]')
